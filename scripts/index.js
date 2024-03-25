@@ -57,6 +57,15 @@ function setup() {
     getContinueBtn().addEventListener('click', activate);
     getCheckbox().addEventListener('change', toggleInputState);
     getNumberInput().addEventListener('input', (event) => {
+        let inputv = event.target.value;
+        if (!inputv){
+
+        }
+        else {
+            getNumberInput().toggleAttribute('disabled', true)
+            getCheckbox().checked = false;
+            play()
+        }
         // 1. check the input value, if none provided, do nothing
 
         // 2. restart a new round of game
